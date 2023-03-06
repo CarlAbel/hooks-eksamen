@@ -1,11 +1,14 @@
 import useSelect from "../hooks/useSelect"
 
 export default function Home() {
-    const Select = useSelect(["Fisk", "Feta", "vingummibamser"])
+    const { select, selected } = useSelect(["Fisk", "Feta", "vingummibamser"])
+
+console.log(selected);
+
   return (
     <>
         <h1>Home</h1>
-        {Select}
+        {select}
     </>
   )
 }
